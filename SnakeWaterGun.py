@@ -12,7 +12,7 @@ player_win_count = 0
 turns = 0
 while turns < 5:
 
-    user_input = input("Choose from snake,water and gun : ")
+    user_input = input("Choose from snake,water and gun : ").lower()
 
     if user_input == "s" or user_input == "w" or user_input == "g":
         pass
@@ -73,3 +73,14 @@ if __name__ == "__main__":
     print(f"Cpu Points {cpu_win_count}")
     print("")
     print(f"Number of draw are {draw_count}")
+
+    print("")
+    
+    if player_win_count>cpu_win_count:
+        print("Player Wins the game")
+    
+    elif player_win_count == cpu_win_count:
+        print("Its a Draw")
+
+    else:
+        print("Player looses")
